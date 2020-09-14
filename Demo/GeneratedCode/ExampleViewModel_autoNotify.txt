@@ -1,0 +1,36 @@
+
+namespace Demo
+{
+    public partial class ExampleViewModel : System.ComponentModel.INotifyPropertyChanged
+    {
+public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+public string Text 
+{
+    get 
+    {
+        return this._text;
+    }
+
+    set
+    {
+        this._text = value;
+        this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Text)));
+    }
+}
+
+
+public int Count 
+{
+    get 
+    {
+        return this._amount;
+    }
+
+    set
+    {
+        this._amount = value;
+        this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Count)));
+    }
+}
+
+} }

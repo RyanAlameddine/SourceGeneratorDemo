@@ -1,0 +1,12 @@
+using System;
+using System.Collections.Immutable;
+namespace OpCodeGenerated
+{
+    public enum OpCodeCategory
+    { Other, Math, Logic, Flow, Memory }
+    public enum ParamType
+    { Register, Byte, Short }
+
+    public record Parameter(string Name, ParamType Type);
+    public record OpCode(string Name, string Description, OpCodeCategory Category, ImmutableArray<Parameter> Parameters);
+}

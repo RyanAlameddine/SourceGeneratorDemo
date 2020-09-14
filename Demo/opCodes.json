@@ -1,0 +1,515 @@
+{
+    "noOp": {
+        "name": "No Operator",
+        "description": "No operation is performed by this opCode",
+        "category": "Other",
+        "params": []
+    },
+    "add": {
+        "name": "Add",
+        "description": "This operation performs *Destination* = *Source 1* + *Source 2*",
+        "category": "Math",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "sub": {
+        "name": "Subtract",
+        "description": "This operation performs *Destination* = *Source 1* - *Source 2*",
+        "category": "Math",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "mult": {
+        "name": "Multiply",
+        "description": "This operation performs *Destination* = *Source 1* * *Source 2*",
+        "category": "Math",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "div": {
+        "name": "Divide",
+        "description": "This operation performs *Destination* = *Source 1* / *Source 2*",
+        "category": "Math",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "mod": {
+        "name": "Mod",
+        "description": "This operation performs *Destination* = *Source 1* % *Source 2*",
+        "category": "Math",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "rSft": {
+        "name": "Shift Right",
+        "description": "This operation performs *Source* = *Source* >> *Amount*",
+        "category": "Math",
+        "params": [
+            {
+                "name": "Source",
+                "type": "Register"
+            },
+            {
+                "name": "Amount",
+                "type": "Short"
+            }
+        ]
+    },
+    "lSft": {
+        "name": "Shift Left",
+        "description": "This operation performs *Source* = *Source* << *Amount*",
+        "category": "Math",
+        "params": [
+            {
+                "name": "Source",
+                "type": "Register"
+            },
+            {
+                "name": "Amount",
+                "type": "Short"
+            }
+        ]
+    },
+    "not": {
+        "name": "Not Operator",
+        "description": "This operation performs *Source* = ~*Source*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Source",
+                "type": "Register"
+            }
+        ]
+    },
+    "and": {
+        "name": "And Operator",
+        "description": "This operation performs *Destination* = *Source 1* & *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "or": {
+        "name": "Or Operator",
+        "description": "This operation performs *Destination* = *Source 1* | *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "xor": {
+        "name": "Exclusive Or Operator",
+        "description": "This operation performs *Destination* = *Source 1* ^ *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "eql": {
+        "name": "Check Equality",
+        "description": "This operation performs *Destination* = *Source 1* == *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "grtr": {
+        "name": "Check Greater Than",
+        "description": "This operation performs *Destination* = *Source 1* > *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "less": {
+        "name": "Check Less Than",
+        "description": "This operation performs *Destination* = *Source 1* < *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "nEql": {
+        "name": "Check InEquality",
+        "description": "This operation performs *Destination* = *Source 1* != *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "grtE": {
+        "name": "Check Greater Than or Equal",
+        "description": "This operation performs *Destination* = *Source 1* >= *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "lssE": {
+        "name": "Check Less Than or Equal",
+        "description": "This operation performs *Destination* = *Source 1* <= *Source 2*",
+        "category": "Logic",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source 1",
+                "type": "Register"
+            },
+            {
+                "name": "Source 2",
+                "type": "Register"
+            }
+        ]
+    },
+    "tp": {
+        "name": "Teleport",
+        "description": "This operation performs jumps to the address *Address*",
+        "category": "Flow",
+        "params": [
+            {
+                "name": "Address",
+                "type": "Short"
+            }
+        ]
+    },
+    "tpZ": {
+        "name": "Teleport if Zero",
+        "description": "This operation performs jumps to the address *Address* if *Source* == 0",
+        "category": "Flow",
+        "params": [
+            {
+                "name": "Source",
+                "type": "Register"
+            },
+            {
+                "name": "Address",
+                "type": "Short"
+            }
+        ]
+    },
+    "tpNZ": {
+        "name": "Teleport if not Zero",
+        "description": "This operation performs jumps to the address *Address* if *Source* != 0",
+        "category": "Flow",
+        "params": [
+            {
+                "name": "Source",
+                "type": "Register"
+            },
+            {
+                "name": "Address",
+                "type": "Short"
+            }
+        ]
+    },
+    "load": {
+        "name": "Load",
+        "description": "This operation loads value at *Address* into *Destination*",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Address",
+                "type": "Short"
+            }
+        ]
+    },
+    "unld": {
+        "name": "Unload",
+        "description": "This operation unloads value from *Source* into *Address*",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Source",
+                "type": "Register"
+            },
+            {
+                "name": "Address",
+                "type": "Short"
+            }
+        ]
+    },
+    "push": {
+        "name": "Push",
+        "description": "This operation pushes *Source* to the stack",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Source",
+                "type": "Register"
+            }
+        ]
+    },
+    "pop": {
+        "name": "Pop",
+        "description": "This operation pops from the stack into *Destination",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            }
+        ]
+    },
+    "peek": {
+        "name": "Peek",
+        "description": "This operation loads from the stack offset by *Offset* into *Destination*",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Offset",
+                "type": "Short"
+            }
+        ]
+    },
+    "set": {
+        "name": "Set",
+        "description": "This operation sets the register *Destination* to *Value*",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Value",
+                "type": "Short"
+            }
+        ]
+    },
+    "stPr": {
+        "name": "Set in Program space",
+        "description": "This operation sets the register *Destination* to the *Label*'s address relative to Program Space",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Label",
+                "type": "Short"
+            }
+        ]
+    },
+    "mov": {
+        "name": "Move",
+        "description": "This operation copies *Source* to *Destination*",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source",
+                "type": "Register"
+            }
+        ]
+    },
+    "call": {
+        "name": "Call",
+        "description": "This operation calls a function at address *Address*",
+        "category": "Flow",
+        "params": [
+            {
+                "name": "Address",
+                "type": "Short"
+            }
+        ]
+    },
+    "ret": {
+        "name": "Return",
+        "description": "This operation returns from a function",
+        "category": "Flow",
+        "params": []
+    },
+    "ldI": {
+        "name": "Load Indrect",
+        "description": "This operation loads value at address *Source* into *Destination*",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source",
+                "type": "Register"
+            }
+        ]
+    },
+    "uldI": {
+        "name": "Unload Indrect",
+        "description": "This operation unloads *Source* into value at address *Destination*",
+        "category": "Memory",
+        "params": [
+            {
+                "name": "Destination",
+                "type": "Register"
+            },
+            {
+                "name": "Source",
+                "type": "Register"
+            }
+        ]
+    }
+}

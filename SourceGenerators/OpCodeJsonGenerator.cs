@@ -34,7 +34,7 @@ using System.Text;
 
 namespace SourceGenerators
 {
-    //[Generator]
+    [Generator]
     class OpCodeJsonGenerator : ISourceGenerator
     {
         public void Initialize(InitializationContext context)
@@ -67,7 +67,9 @@ namespace OpCodeGenerated
     public record OpCode(string Name, string Description, OpCodeCategory Category, ImmutableArray<Parameter> Parameters);
 }";
 
+#if WRITESOURCE
             File.WriteAllText("GeneratedCode/backendTypes.txt", code);
+#endif
             context.AddSource("backendTypes", SourceText.From(code, Encoding.UTF8));
         }
 
@@ -90,7 +92,9 @@ namespace OpCodeGenerated
 
             classBuilder.Append("} }");
 
+#if WRITESOURCE
             File.WriteAllText("GeneratedCode/OpCodes.txt", classBuilder.ToString());
+#endif
             context.AddSource("OpCodes", SourceText.From(classBuilder.ToString(), Encoding.UTF8));
         }
 
@@ -122,7 +126,7 @@ namespace OpCodeGenerated
             classBuilder.Append($"public static readonly OpCode {name} = ");
             classBuilder.Append($"new OpCode(\"{fullName}\", \"{description}\", {"OpCodeCategory." + category}, ");
             GenerateParametersDeclaration(classBuilder, parameters);
-            classBuilder.Append($");\n\t");
+            classBuilder.Append($");\n\t\t");
         }
 
         private void GenerateParametersDeclaration(StringBuilder classBuilder, List<(string, string)> parameters)

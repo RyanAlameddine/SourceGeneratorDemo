@@ -26,7 +26,9 @@ namespace HelloWorldGenerated
     }
 }");
 
+#if WRITESOURCE
             File.WriteAllText("GeneratedCode/helloWorldGenerated.txt", sourceBuilder.ToString());
+#endif
             // inject the created source into the users compilation
             context.AddSource("helloWorldGenerated", SourceText.From(sourceBuilder.ToString(), Encoding.UTF8));
         }

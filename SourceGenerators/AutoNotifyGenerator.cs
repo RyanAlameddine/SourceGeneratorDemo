@@ -36,7 +36,9 @@ namespace AutoNotify
 
         public void Execute(SourceGeneratorContext context)
         {
+#if WRITESOURCE
             File.WriteAllText("GeneratedCode/AutoNotifyAttribute.txt", attributeText);
+#endif
             // add the attribute text
             context.AddSource("AutoNotifyAttribute", SourceText.From(attributeText, Encoding.UTF8));
 
@@ -74,7 +76,9 @@ namespace AutoNotify
             {
                 string classSource = ProcessClass(group.Key, group.ToList(), attributeSymbol, interfaceSymbol, context);
 
-                File.WriteAllText($"GeneratedCode/{group.Key.Name}_autoNotify.txt", classSource); 
+#if WRITESOURCE
+                File.WriteAllText($"GeneratedCode/{group.Key.Name}_autoNotify.txt", classSource);
+#endif
                 context.AddSource($"{group.Key.Name}_autoNotify.cs", SourceText.From(classSource, Encoding.UTF8));
             }
         }

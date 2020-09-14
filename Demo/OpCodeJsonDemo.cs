@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-//using OpCodeGenerated;
+using OpCodeGenerated;
 
 namespace Demo
 {
@@ -9,7 +9,7 @@ namespace Demo
     {
         public void DoSomething()
         {
-            //OpCode code = OpCodes.ldI;
+            OpCode code = OpCodes.ldI;
         }
     }
 }

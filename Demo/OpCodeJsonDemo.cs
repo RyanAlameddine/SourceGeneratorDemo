@@ -5,11 +5,12 @@ using OpCodeGenerated;
 
 namespace Demo
 {
-    class OpCodeJsonDemo
+    static class OpCodeJsonDemo
     {
-        public void DoSomething()
+        public static string DoSomething()
         {
             OpCode code = OpCodes.ldI;
+            return code.Description;
         }
     }
 }

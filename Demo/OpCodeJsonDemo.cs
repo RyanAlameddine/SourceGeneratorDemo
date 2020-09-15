@@ -7,10 +7,14 @@ namespace Demo
 {
     static class OpCodeJsonDemo
     {
-        public static string DoSomething()
+        public static void DoSomething()
         {
             OpCode code = OpCodes.ldI;
-            return code.Description;
+
+            Console.WriteLine(code.Parameters[0].Name);
+            Console.WriteLine(OpCodes.noOp.Description);
+            Console.WriteLine(OpCodes.eql.Category == OpCodeCategory.Flow);
+            Console.WriteLine(OpCodes.xor.Parameters[2].Type == ParamType.Register);
         }
     }
 }

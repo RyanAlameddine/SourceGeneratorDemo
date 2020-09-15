@@ -11,7 +11,8 @@ namespace Demo
         static void Main(string[] args)
         {
             HelloWorld.SayHello();
-            Console.WriteLine(OpCodeJsonDemo.DoSomething());
+            OpCodeJsonDemo.DoSomething();
+            PropertyNotifyDemo.DoSomething();
         }
     }
 }

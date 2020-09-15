@@ -131,12 +131,12 @@ namespace OpCodeGenerated
 
         private void GenerateParametersDeclaration(StringBuilder classBuilder, List<(string, string)> parameters)
         {
-            classBuilder.Append("new ImmutableArray<Parameter> { ");
+            classBuilder.Append("new Parameter[] { ");
             foreach((string name, string type) in parameters)
             {
                 classBuilder.Append($"new Parameter(\"{name}\", {"ParamType." + type}), ");
             }
-            classBuilder.Append("}");
+            classBuilder.Append("}.ToImmutableArray()");
         }
     }
 }

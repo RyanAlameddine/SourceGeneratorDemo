@@ -138,6 +138,7 @@ public {fieldType} {propertyName}
     set
     {{
         this.{fieldName} = value;
+        throw new System.Exception();
         this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof({propertyName})));
     }}
 }}

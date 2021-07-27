@@ -4,48 +4,48 @@ namespace Demo
     public partial class MagicBall
     {
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-public int Position 
-{
-    get 
-    {
-        return this.position;
-    }
+        public int Position 
+        {
+            get 
+            {
+                return this.position;
+            }
 
-    set
-    {
-        this.position = value;
-        this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Position)));
-    }
-}
-
-
-public int Size 
-{
-    get 
-    {
-        return this.size;
-    }
-
-    set
-    {
-        this.size = value;
-        this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Size)));
-    }
-}
+            set
+            {
+                this.position = value;
+                this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Position)));
+            }
+        }
 
 
-public string Name 
-{
-    get 
-    {
-        return this.name;
-    }
+        public int Size 
+        {
+            get 
+            {
+                return this.size;
+            }
 
-    set
-    {
-        this.name = value;
-        this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Name)));
-    }
-}
+            set
+            {
+                this.size = value;
+                this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Size)));
+            }
+        }
+
+
+        public string Name 
+        {
+            get 
+            {
+                return this.name;
+            }
+
+            set
+            {
+                this.name = value;
+                this.PropertyChanged?.Invoke(this, new System.ComponentModel.PropertyChangedEventArgs(nameof(Name)));
+            }
+        }
 
 } }

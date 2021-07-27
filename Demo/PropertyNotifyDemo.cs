@@ -16,6 +16,12 @@ namespace Demo
         string name = "Kevin"; //in english
     }
 
+
+
+
+
+
+
     class PropertyNotifyDemo
     {
         public static void DoSomething()
